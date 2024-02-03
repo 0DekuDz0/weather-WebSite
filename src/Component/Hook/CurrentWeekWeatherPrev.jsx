@@ -1,6 +1,7 @@
 import useCurrentTime from "./useCurrentTime";
 import useWeather from "./useWeather";
 
+
 export default function CurrentWeekWeatherPrev(){
     const weatherData = useWeather("forecast");
     const currentTime = useCurrentTime();
@@ -8,7 +9,7 @@ export default function CurrentWeekWeatherPrev(){
 
     function getDayOfWeek(currentDay,prev){
         if(currentDay + prev>6){
-             return dayOfWeek[currentDay + prev - 7];
+            return dayOfWeek[currentDay + prev - 7];
         }
         return dayOfWeek[currentDay+prev];
     }
@@ -33,7 +34,7 @@ export default function CurrentWeekWeatherPrev(){
                         {weatherData.weatherData.forecast.forecastday[0].day.condition.text}
                     </div>
                     <div className="day-temp">
-                        {weatherData.weatherData.forecast.forecastday[0].day.avgtemp_c}
+                        {weatherData.weatherData.forecast.forecastday[0].day.avgtemp_c}°
                     </div>
                 </div>
                 <div className="day-currentWeekWeather">
@@ -43,7 +44,7 @@ export default function CurrentWeekWeatherPrev(){
                         {weatherData.weatherData.forecast.forecastday[1].day.condition.text}
                     </div>
                     <div className="day-temp">
-                        {weatherData.weatherData.forecast.forecastday[1].day.avgtemp_c}
+                        {weatherData.weatherData.forecast.forecastday[1].day.avgtemp_c}°
                     </div>
                 </div>
                 <div className="day-currentWeekWeather">
@@ -53,7 +54,7 @@ export default function CurrentWeekWeatherPrev(){
                         {weatherData.weatherData.forecast.forecastday[2].day.condition.text}
                     </div>
                     <div className="day-temp">
-                        {weatherData.weatherData.forecast.forecastday[2].day.avgtemp_c}
+                        {weatherData.weatherData.forecast.forecastday[2].day.avgtemp_c}°
                     </div>
                 </div>
             </div>

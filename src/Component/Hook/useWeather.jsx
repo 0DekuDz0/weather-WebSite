@@ -15,7 +15,7 @@ export default function useWeather(type){
         url = `http://api.weatherapi.com/v1/${apiMethode}?key=${apiKey}&q=${location.latitude},${location.longitude}&lang=en`
     }else if(type === "forecast"){
         apiMethode = "forecast.json"
-        url = `http://api.weatherapi.com/v1/${apiMethode}?key=${apiKey}&q=${location.latitude},${location.longitude}&lang=en&days=10&aqi=no&alerts=no`
+        url = `https://api.weatherapi.com/v1/${apiMethode}?key=${apiKey}&q=${location.latitude},${location.longitude}&lang=en&days=10&aqi=no&alerts=no`
     }else {
        console.log('Invalid type');
     }

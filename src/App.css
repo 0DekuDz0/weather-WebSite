@@ -1,38 +1,357 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
+  overflow-x: hidden;
+}
+
+.root{
+  width: 100vw;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(33,34,34);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+
+.currentTimeWeather{  
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  margin-top: 2rem;
+}
+
+.header-currentTimeWeather{
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  font-size: 10vw;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+
+}
+
+.header-currentTimeWeather img{
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 500px;
+  max-height: 500px;
+  width: 50vw;
+  height: 50vw;
+}
+
+
+
+.header-currentTimeWeather .text-prev{
+  font-size: 5vw;
+  font-weight: 100;
+  color: rgba(249, 229, 229, 0.668);
+
+}
+
+.header-currentTimeWeather .temp-prev{
+  color: #feffff;
+  font-size: 20vw;
+}
+
+.header-currentTimeWeather .temp-prev-val{
+  color: rgba(249, 229, 229, 0.668);
+  font-size: 20vw;
+  font-weight: 100;
+}
+
+.position-currentTimeWeather{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vw;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #feffff;
+}
+
+.info-currentTimeWeather{
+  background-color: rgb(35,37,43);
+  width:  85vw;
+  height: 10vh;
+  border-radius: 20px;
+  box-shadow: 10px 10px 48px -11px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 48px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 48px -11px rgba(0,0,0,0.75);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.info-currentTimeWeather .line{
+  width: 1px;
+  height: 40px;
+  border: 1px solid rgb(73, 70, 70);
+  border-radius: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.info-currentTimeWeather .info-text{
+  color: rgba(249, 229, 229, 0.668);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.info-currentTimeWeather img{
+  width: 30px;
+}
+
+.currentDayWeather{
+  width: 100vw;
   display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.hour-currentDayWeather-current{
+  background-color: rgb(72,172,250) !important; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(73, 70, 70);
+  color: white;
+  height: 90%;
+  width: 15vw;
+  border-radius: 20px;
+
+}
+
+.hour-currentDayWeather{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(30,32,36) ;
+  border: 1px solid rgb(73, 70, 70);
+  color: white;
+  height: 90%;
+  width: 15vw;
+  border-radius: 20px;
+
+}
+.hour-currentDayWeather-current img,
+.hour-currentDayWeather img{
+  width: 5vh;
+}
+
+.hour-currentDayWeather-current .hour,
+.hour-currentDayWeather .hour{
+  font-size: small;
+}
+
+.currentDayWeather-section{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2rem 0 2rem 0;
+
+}
+
+.currentDayWeather-section .header-text-section{
+  color: white;
+  width: 100vw;
+  font-size: 4vw;
+  font-weight: bold;
+  padding-left: 8vw;
+}
+
+
+
+
+
+.currentWeekWeather{
+  width: 100vw;
+  height: 100rem;
+  height: 30%;
+  display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  margin:  2rem 0 5rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+.day-currentWeekWeather{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-direction: row;
+  padding-left: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.day-name{
+  width: 30vw;
+  display: flex;
+  justify-content: start;
+  padding: 1rem;
+  align-items: center;
+  font-size: large;
+}
+
+.day-condition{
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-temp{
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  text-align: center;
+  font-size: 4vw;
+  background: rgb(205,255,216);
+  background: linear-gradient(90deg, rgba(205,255,216,1) 0%, rgba(148,185,255,1) 100%);
+}
+
+.header-root img{
+  width: 40vw;
+  background-color: white;
+}
+
+.bande{
+  background: linear-gradient(90deg, rgba(205,255,216,1) 0%, rgba(148,185,255,1) 100%);
+  width: 100vw;
+  height: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.bande p{
+  font-size: 5vw;
+  font-family: 'Poppins', sans-serif;
+  z-index: 2;
+}
+
+.bande img{
+  width: 5vw;
+  position: relative;
+  z-index: 1;
+  animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+  0%{
+    left: -100%;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    left: 100%;
   }
 }
+
+ @media screen and  (min-width: 950px) {
+  .currentTimeWeather{
+    display: grid;
+    grid-template-areas: 
+    "pos pos"
+    "temp temp"
+    "info info ";
+    justify-items: center
+
+
+  }
+
+  .position-currentTimeWeather{
+    grid-area: pos;
+    font-size: 6vw;
+  }
+  .position-currentTimeWeather img{
+    width: 4vw;
+  }
+
+  .header-currentTimeWeather{
+    grid-area: temp;
+  }
+
+  .info-currentTimeWeather{
+    grid-area: info;
+  }
+
+
+  .currentTimeWeather .position-currentTimeWeather{
+    width: 50vw;
+  }
+
+  .currentTimeWeather .header-currentTimeWeather{
+    width: 100vw;
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    grid-template-areas: 
+    "temp img"
+    "texttmp img";
+
+  }
+
+
+  
+  .currentTimeWeather .info-currentTimeWeather{
+    width: 90vw;
+  }
+
+  .currentTimeWeather .header-currentTimeWeather img{
+    width: 30vw;
+    height: 30vw;
+    grid-area: img;
+  }
+
+  
+  .currentTimeWeather .header-currentTimeWeather .text-prev{
+    grid-template-areas: texttmp;
+  }
+
+  .currentTimeWeather .header-currentTimeWeather .temp-prev{
+    grid-area: temp;
+  }
+
+  .currentTimeWeather .header-currentTimeWeather .temp-prev-val{
+    font-size: 10vw;
+  }
+
+  .bande{
+    height: 8rem;
+  }
+
+
+  
+ }
